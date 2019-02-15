@@ -1,8 +1,8 @@
-<a href="<?php echo base_url(); ?>jobs">&laquo; Zur&uuml;ck</a>
+<a href="<?php echo base_url(); ?>jobs" class="btn btn-primary mb-2" role="button" aria-pressed="true">Zurück</a>
 
 <h2>Details: <?php echo $job->title; ?></h2>
 
-<table>
+<table class="table btn-hover">
     <tr>
         <td>Bezeichnung:</td>
         <td><?php echo $job->title; ?></td>

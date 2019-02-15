@@ -20,7 +20,6 @@ class Jobs extends CI_Controller
     {
         parent::__construct();
         $this->load->model('jobs_model', '', TRUE);
-        $this->load->library('layout');
     }
 
     public function index()
@@ -28,7 +27,9 @@ class Jobs extends CI_Controller
         $data = array(
             'jobs' => $this->jobs_model->getAll(),
         );
-        $this->load->library('layout')->view('/jobs/index', $data);
+        $this->load->view('header');
+        $this->load->view('/jobs/index', $data);
+        $this->load->view('footer');
     }
 
     public function add()
@@ -46,7 +47,9 @@ class Jobs extends CI_Controller
 
             redirect('jobs');
         } else {
-            $this->load->library('layout')->view('/jobs/add');
+            $this->load->view('header');
+            $this->load->view('/jobs/add');
+            $this->load->view('footer');
         }
     }
 
@@ -61,7 +64,8 @@ class Jobs extends CI_Controller
         $data = array(
             'job' => $this->jobs_model->getById($id),
         );
-
-        $this->load->library('layout')->view('/jobs/view', $data);
+        $this->load->view('header');
+        $this->load->view('/jobs/view', $data);
+        $this->load->view('footer');
     }
 }
