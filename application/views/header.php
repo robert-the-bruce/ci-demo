@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="/assets/css/style.css" rel='stylesheet' type='text/css' />
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
 <nav class="navbar navbar-inverse" id="header">
@@ -26,10 +24,11 @@
             <ul class="nav navbar-nav">
                 <li class="#"><a href="<?php echo base_url(); ?>home">Home</a></li>
                 <li class="#"><a href="<?php echo base_url(); ?>jobs">Jobs</a></li>
+                <li class="#"><a href="<?php echo base_url(); ?>user">User</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url(); ?>users/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="<?php echo base_url(); ?>users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="<?php echo base_url(); ?>user/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="<?php echo base_url(); ?>user/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>

@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * CodeIgniter layout Class
  *
- * @property  layout layout
+ * @property  Layout layout
  */
 class Layout extends CI_Controller
 {

@@ -2,26 +2,28 @@
 /**
  * Created by PhpStorm.
  * User: rsalc
- * Date: 10.02.2019
- * Time: 14:28
+ * Date: 26.02.2019
+ * Time: 20:14
  */
 
-if (!defined('BASEPATH')) exit('No direct script access allowed');
+namespace App\classes;
 
-
-class Jobs_model extends CI_Model
+abstract class AbstractModel extends \CI_Model
 {
-
-    protected $table = 'jobs';
-
-    // returns all job offers
+    /**
+     * @return mixed
+     */
     public function getAll()
     {
         $result = $this->db->get($this->table)->result_object();
         return $result;
     }
 
-    // looks for job offer by id
+
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function getById($id)
     {
         $this->db->select('*')
@@ -33,13 +35,30 @@ class Jobs_model extends CI_Model
         return $result;
     }
 
-    // add job offer
+    /**
+     * @param array $data
+     * @return mixed
+     */
     public function add(array $data)
     {
         return $this->db->insert($this->table, $data);
     }
 
-    // deletes job offer
+    /**
+     * @param $data
+     * @param $id
+     */
+    public function update($data, $id)
+    {
+        $this->db->where('id', $id);
+        $this->db->update($this->table, $data);
+
+    }
+
+
+    /**
+     * @param $id
+     */
     public function delete($id)
     {
         $this->db->delete($this->table, array('id' => (int)$id));
