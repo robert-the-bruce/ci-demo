@@ -185,6 +185,8 @@ $view_folder = '';
  * ---------------------------------------------------------------
  */
 
+
+session_start();
 // Set the current directory correctly for CLI requests
 if (defined('STDIN')) {
     chdir(dirname(__FILE__));

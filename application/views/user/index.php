@@ -5,9 +5,9 @@
 
     <table class="table">
         <thead class="thead-dark">
-        <th>ID</th>
         <th>Name</th>
         <th>Passwort</th>
+        <th>Aktion</th>
         </thead>
         <tbody>
 
@@ -16,17 +16,12 @@
                 <td><?php echo $user->name; ?></td>
                 <td><?php echo $user->password; ?></td>
                 <td>
-                    <a href="<?php echo base_url() . 'user/view/' . $job->id; ?>">Ansehen</a>
-                    <a href="<?php echo base_url() . 'user/update/' . $job->id; ?>">Ändern</a>
-                    <a href="<?php echo base_url() . 'user/delete/' . $job->id; ?>">Löschen</a>
+                    <a href="<?php echo base_url() . 'user/view/' . $user->id; ?>">Ansehen</a>
+                    <a href="<?php echo base_url() . 'user/update/' . $user->id; ?>">Ändern</a>
+                    <a href="<?php echo base_url() . 'user/delete/' . $user->id; ?>">Löschen</a>
                 </td>
             </tr>
         <?php endforeach; ?>
-
         </tbody>
     </table>
 </div>
-
-
-
-
