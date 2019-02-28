@@ -19,7 +19,7 @@ class UserModel extends \App\classes\AbstractModel
     {
         $this->db->select('*')
             ->from($this->table)
-            ->where('name', (int)$username);
+            ->where('name', $username);
 
         $result = $this->db->get()->row_object();
 
